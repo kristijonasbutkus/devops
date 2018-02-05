@@ -1,0 +1,26 @@
+version: "3"
+services:
+  web:
+    image: nginx:latest
+    volumes:
+       - "../src:/src:rw"
+       - "./site.conf:/etc/nginx/conf.d/default.conf"
+    ports:
+      - "1337:80"
+  php:
+    image: kristijonas/php-comp-pdo:1.0
+    volumes:
+      - "../src:/src:rw"
+  mysql:
+    image: mysql:5.6
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=db
+#MySQL database username
+      - MYSQL_USER=username
+#MySQL database password
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - "../database:/var/lib/mysql:rw"
