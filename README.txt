@@ -2,14 +2,16 @@
 README file contains instructions on how to setup working environment for developers
 ######################################################
 
-Pulling website files from GitHub:
-	"git clone https://github.com/adeoweb/devops-workshop src"
--------pull "config" folder and "docker-composer.yml" file
+Pull website files from GitHub:
+	git clone https://github.com/adeoweb/devops-workshop src
+
+Pull configuration files from GitHub:
+	git clone https://github.com/kristijonasbutkus/devops configs
 
 ######################################################
 
 Configuration files
-There are 2 main configuration files in "configs" directory that you can to edit to match your needs:
+There are 2 configuration files in "configs" directory that you can to edit to match your needs:
 	docker-compose.yml
 Here you set your MySQL database login username and password.
 
