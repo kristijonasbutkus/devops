@@ -8,7 +8,7 @@ services:
     ports:
       - "8080:80"
   php:
-    image: php7.2-composer-pdo:1.1
+    image: php--comp--pdo:1
     volumes:
       - "../src:/src:rw"
   mysql:
