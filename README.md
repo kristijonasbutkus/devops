@@ -28,7 +28,7 @@ Getting ready to connect
 
 2) After everything loads up execute one more command:
 
-sudo docker exec -i configs_php_1 bash -c "cd /src && composer install"
+	sudo docker exec -i configs_php_1 bash -c "cd /src && composer install"
 
 3) Open ".env" file in your website directory. Edit this file in order to change MySQL credentials (must match docker-compose.yml credentials):
 
@@ -41,9 +41,9 @@ DATABASE_URL=mysql://username:password@mysql:3306/db
 
 5) Lastly, execute commands below to update mysql database with your website content:
 
-sudo docker exec -i configs_php_1 bash -c "cd /src && bin/console doctrine:schema:update --force"
+	sudo docker exec -i configs_php_1 bash -c "cd /src && bin/console doctrine:schema:update --force"
 
-sudo docker exec -i configs_php_1 bash -c "cd /src && bin/console doctrine:fixtures:load"
+	sudo docker exec -i configs_php_1 bash -c "cd /src && bin/console doctrine:fixtures:load"
 
 ######################################################
 
